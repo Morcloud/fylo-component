@@ -1,0 +1,148 @@
+/* - Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --blue:hsl(228, 56%, 26%);
+    --Dblue: hsl(229, 57%, 11%);
+    --Lblue:hsl(243, 100%, 93%);
+    --gray:hsl(229, 7%, 55%);
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/bg-desktop.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fylo {
+    background: var(--blue);
+    margin-right: 25px;
+    width: 150px;
+    padding: 30px 100px 30px 30px;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.fylo_logo {
+    width: 120px;
+    margin: 0;
+}
+
+.fylo_logo img {
+    width: 100%;
+}
+
+.fylo_icons {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.fylo_icon--container {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: var(--Dblue); 
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fylo_icon--container img {
+    width: 20px;
+}
+
+.fylo_storage {
+    /* border: 1px solid red; */
+    background: var(--blue);
+    color: var(--Lblue);
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: repeat(3, 30px);
+    padding: 15px 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.fylo_storage .storage {
+    font-size: .8em;
+    margin: 0;
+    grid-column: 1 / -1;
+    align-self: end;
+}
+
+.fylo_storage--line {
+    width: 400px;
+    height: .8em;
+    background-color: var(--Dblue);
+    border: 2px solid var(--Dblue);
+    border-radius: 25px;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+}
+
+.linea {
+    width: 75%;
+    height: .8em;
+    overflow: hidden;
+    border-radius: 25px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%))
+}
+
+.fylo_storage--init {
+    font-size: .7em;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.fylo_storage--end {
+    font-size: .7em;
+    margin: 0;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.fylo_gb {
+    border:1px solid var(--Dblue);
+    padding: 10px;
+    background: var(--Lblue);
+    color: var(--Dblue);
+    border-radius: 10px;
+    position: absolute;
+    right: 30px;
+    top: -30px;
+}
+
+.fylo_gb p {
+    margin: 0;
+}
+
+.fylo_gb p span{
+    margin: 0;
+    font-size: .7em;
+}
+
+.fylo_gb p strong {
+    font-weight: 700;
+    font-size: 2em;
+}
